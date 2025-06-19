@@ -1,0 +1,139 @@
+:root {
+    
+    --primario: #2F8FE4;
+    --primarioOscuro: #0671cf;
+    --secundario: #0CE793;
+    --secundarioOscuro: rgb(11, 143, 93);
+    --blanco: #fff;
+    --negro: #000;
+
+    --fuentePrincipal: "El Messiri" , cursive;
+
+}
+
+/**GLOBALES**/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: var(--primarioOscuro);
+    color: var(--blanco);
+    padding: 1rem;
+    border: none;
+    font-size: 2.5rem;
+
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 20rem;
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4rem;
+    
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/**HEADER**/
+.header {
+    display: flex;
+    text-align: left;
+    background-color: var(--primarioOscuro);  
+}
+.header__title {
+    font-size: 8rem;
+    margin-left: 1rem;
+    color: var(--blanco);
+}
+/**Main menu**/
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.mainMenu__title {
+    font-size: 4.5rem; 
+    text-align: center;
+}
+.mainMenu__navbar {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+.menu__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.btn__menu {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: var(--primarioOscuro);
+    color: var(--blanco);
+    cursor: pointer;
+}
+.btn__menu:hover {
+    background-color: var(--secundarioOscuro);
+}
+
+/**CONTENT**/
+.content {
+    
+}
