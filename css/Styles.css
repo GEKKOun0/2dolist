@@ -155,3 +155,15 @@ h3 {
     font-size: 2rem;
 
 }
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+
+.task {
+    border: 0.1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
