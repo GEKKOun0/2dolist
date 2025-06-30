@@ -140,3 +140,18 @@ h3 {
    width: 100%;
    
 }
+
+/**Content tasks**/
+.searchBar {
+    display: flex;
+    justify-content: right;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    margin-left: 0;
+
+}
+
+.searchBar__barr {
+    font-size: 2rem;
+
+}
