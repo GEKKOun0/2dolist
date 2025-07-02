@@ -6,6 +6,7 @@
     --secundarioOscuro: rgb(11, 143, 93);
     --blanco: #fff;
     --negro: #000;
+    --azulclaro: #d2f0fc;
 
     --fuentePrincipal: "El Messiri" , cursive;
 
@@ -182,5 +183,16 @@ h3 {
 }
 
 /*FORM MODAL*/
+.modal-container {
+     
+   
+}   
 
 
+.taskForm {
+    background-color: var(--azulclaro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
