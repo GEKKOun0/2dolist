@@ -50,29 +50,30 @@
 
             <div id="modal" class="modal-container">
                 <form class="taskForm" action="">
-                    <label for=""> Title: 
+                    <label for="taskTitle"> Title: 
                         <input id="taskTitle" class="taskForm__field" type="text" placeholder="Task name">
                     </label>
-                    <label for=""> Date: 
-                        <input class="taskForm__field" type="date" placeholder="Date">
+                    <label for="taskDate"> Date: 
+                        <input id="taskDate" class="taskForm__field" type="date" placeholder="Date">
                     </label>
-                     <label for=""> Description: 
-                        <textarea id="taskDes" class="taskForm__field" name="" ></textarea>
+                     <label for="taskDesc"> Description: 
+                        <textarea id="taskDesc" class="taskForm__field" name="" ></textarea>
                     </label>
-                     <label for=""> Select task priority: 
+                     <label for="taskPrio"> Select task priority: 
                         <select id="taskPrio" class="taskForm__field">
-                            <option value="">Important</option>
-                            <option value="">Normal</option>
+                            <option value="" disabled selected>Select priority</option>
+                            <option value="important">Important</option>
+                            <option value="normal">Normal</option>
                         </select>
                     </label>
-                    <label for=""> Select Color: 
+                    <label for="taskColor"> Select Color: 
                         <input id="taskColor" class="taskForm__field" type="color">
                     </label>
                     <button id="taskCreateBtn" class="taskForm__btn" type="submit">Create a task</button>
                 </form>
             </div>
            
-            <div class="task-container">
+            <div id="tasksContainer" class="task-container">
             </div>
         </main>
     </div>

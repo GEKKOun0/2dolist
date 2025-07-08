@@ -67,6 +67,14 @@ button {
     height: 100vh;
 }
 
+.error {
+    background-color: rgb(185, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
 h1,
 h2,
 h3 {
@@ -164,11 +172,12 @@ h3 {
     padding: 1rem;
 }
 
-.task {
-  background-color: #2b175a;
-  border: 1px solid #641b1b;
-  padding: 1rem;
-  border-radius: 0.5rem;
+.task-item {
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 15rem;
+    flex: 0 0 auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #addTaskBtn {
@@ -184,13 +193,23 @@ h3 {
 
 /*FORM MODAL*/
 .modal-container {
-     
-   
+    display: none;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
 }   
 
+.modal-container.show {
+    display: flex;
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
 .taskForm {
     background-color: var(--azulclaro);
+    padding: 2rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
