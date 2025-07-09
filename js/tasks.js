@@ -1,55 +1,4 @@
 
-const addTaskBtn = document.querySelector('#addTaskBtn');
-const taskCreateBtn = document.querySelector('#taskCreateBtn');
-const taskForm = document.querySelector('.taskForm');
-const modal = document.querySelector('#modal');
-
-addTaskBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    modal.classList.add('show');
-});
-
-//evaluando el formulario
-taskForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const titleinput = document.querySelector('#taskTitle')
-    const dateinput = document.querySelector('#taskDate')
-    const descinput = document.querySelector('#taskDesc')
-    const prioinput = document.querySelector('#taskPrio')
-    const colorinput = document.querySelector('#taskColor')
-
-    const titleTask = titleinput.value.trim();
-    const dateTask = dateinput.value.trim();
-    const descTask = descinput.value.trim();
-    const prioTask = prioinput.value.trim();
-    const colorTask = colorinput.value.trim();
-
-
-    // console.log('titleTask:', titleTask);
-    // console.log('dateTask:', dateTask);
-    // console.log('descTask:', descTask);
-    // console.log('prioTask:', prioTask);
-
-    const today = new Date().toISOString().split('T')[0];
-    if (dateTask < today) {
-        showAlert('La fecha no puede ser anterior al día actual', true);
-        return;
-    }
-
-    if (titleTask.value.trim() === '' || dateTask.value.trim() === '' || descTask.value.trim() === '' || prioTask.value.trim() === '') {
-        showAlert('All fields are requiered', true);
-        return;
-    } else {
-        modal.classList.remove('show');
-        // resetTasks();
-        createTasks(titleTask, dateTask, descTask, prioTask, colorTask);
-        renderTask();
-        taskForm.reset();
-    }
-
-});
-
 function createTasks(titleTask, dateTask, descTask, prioTask, colorTask) {
     const task = {
         id: Date.now(),
@@ -109,8 +58,4 @@ function showAlert(m, error = null) {
     }, 5000);
 }
 
-function resetTasks() {
-    localStorage.removeItem("tasks");
-    const tasklist = document.querySelector('.task-container');
-    tasklist.innerHTML = '';
-}
+
